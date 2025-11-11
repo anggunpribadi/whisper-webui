@@ -2,7 +2,7 @@ git+https://github.com/huggingface/transformers
 git+https://github.com/openai/whisper.git
 transformers
 ffmpeg-python==0.2.0
-gradio==4.44.0
+gradio
 gradio-client==0.8.1
 yt-dlp
 torchaudio
