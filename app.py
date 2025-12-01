@@ -506,15 +506,15 @@ class WhisperTranscriber:
         json_file = self.__create_file(json_result, output_dir, source_name + "-result.json")
         print("Created JSON file " + json_file)
 
-        print("Max line width " + str(languageMaxLineWidth))
+        print("Max line width " + str(languageMaxLineWidth)){source_name}-subs.srt
         vtt = self.__get_subs(result["segments"], "vtt", languageMaxLineWidth, highlight_words=highlight_words)
         srt = self.__get_subs(result["segments"], "srt", languageMaxLineWidth, highlight_words=highlight_words)
 
         output_files = []
         output_files.append(self.__create_file(srt, output_dir, source_name + "-subs.srt"));
-        output_files.append(self.__create_file(vtt, output_dir, source_name + "-subs.vtt"));
-        output_files.append(self.__create_file(text, output_dir, source_name + "-transcript.txt"));
-        output_files.append(json_file)
+        # output_files.append(self.__create_file(vtt, output_dir, source_name + "-subs.vtt"));
+        # output_files.append(self.__create_file(text, output_dir, source_name + "-transcript.txt"));
+        # output_files.append(json_file)
 
         return output_files, text, vtt
 
