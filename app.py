@@ -506,7 +506,7 @@ class WhisperTranscriber:
         json_file = self.__create_file(json_result, output_dir, source_name + "-result.json")
         print("Created JSON file " + json_file)
 
-        print("Max line width " + str(languageMaxLineWidth)){source_name}-subs.srt
+        # print("Max line width " + str(languageMaxLineWidth)){source_name}-subs.srt
         vtt = self.__get_subs(result["segments"], "vtt", languageMaxLineWidth, highlight_words=highlight_words)
         srt = self.__get_subs(result["segments"], "srt", languageMaxLineWidth, highlight_words=highlight_words)
 
