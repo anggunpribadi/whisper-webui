@@ -20,7 +20,7 @@ def download_url(url: str, maxDuration: int = None, destinationDirectory: str = 
     except yt_dlp.utils.DownloadError as e:
         # In case of an OS error, try again with a different output template
         if e.msg and e.msg.find("[Errno 36] File name too long") >= 0:
-            return _perform_download(url, maxDuration=maxDuration, outputTemplate="%(title).10s %(id)s.%(ext)s")
+            return _perform_download(url, maxDuration=maxDuration, outputTemplate="%(id)s.%(ext)s")
         pass
 
 def _perform_download(url: str, maxDuration: int = None, outputTemplate: str = '%(id)s.%(ext)s', destinationDirectory: str = None, playlistItems: str = "1"):
